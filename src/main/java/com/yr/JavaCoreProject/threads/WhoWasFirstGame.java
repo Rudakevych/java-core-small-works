@@ -4,6 +4,11 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * Program for checking who was first - Egg or Chicken
+ * We start t
+ */
+
 public class WhoWasFirstGame {
     public static void main(String[] args) {
         System.out.println("Let's begin!");
