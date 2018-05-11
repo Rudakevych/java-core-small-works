@@ -1,15 +1,17 @@
 package com.yr.JavaCoreProject.tasks;
 
+import java.util.ArrayList;
+
 public class User {
 
     private String firstname;
     private String lastname;
     private int age;
     private double salary;
-    private Order orders;
+    private ArrayList<Order> orders;
     private int friends;
 
-    public User(String firstname, String lastname, int age, double salary, Order orders, int friends) {
+    public User(String firstname, String lastname, int age, double salary, ArrayList<Order> orders, int friends) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.age = age;
@@ -53,11 +55,11 @@ public class User {
         this.salary = salary;
     }
 
-    public Order getOrders() {
+    public ArrayList<Order> getOrders() {
         return orders;
     }
 
-    public void setOrders(Order orders) {
+    public void setOrders(ArrayList<Order> orders) {
         this.orders = orders;
     }
 
