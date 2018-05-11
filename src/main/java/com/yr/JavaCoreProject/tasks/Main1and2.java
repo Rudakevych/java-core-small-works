@@ -3,6 +3,7 @@ package com.yr.JavaCoreProject.tasks;
 import org.omg.PortableInterceptor.USER_EXCEPTION;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Main1and2 {
     /**
@@ -11,6 +12,7 @@ public class Main1and2 {
      * - для нахождения пользователей в заданном интервале лет(от и до)
      * - для нахождения суммарной цены по всем заказам пользователя
      * - для нахождения суммарной цены по заказам пользователя в заданном интервале времени(от и до по date)
+     * <p>
      * - для нахождения купленных товаров пользователя по заданной категории
      * - для нахождения заданного количества самых дорогих заказов пользователя
      */
@@ -49,5 +51,14 @@ public class Main1and2 {
         return allOrdersPrice;
     }
 
-
+    // - для нахождения суммарной цены по заказам пользователя в заданном интервале времени(от и до по date)
+    public double getAllOrdersPriceAndDate(User user, Date fromDate, Date toDate) {
+        double allOrdersPrice = 0;
+        for (int i = 0; i < user.getOrders().size(); i++) {
+//            if (user.getOrders().get(i).getDate() ) {
+//                allOrdersPrice += user.getOrders().get(i).getProduct().getPrice();
+//            }
+        }
+        return allOrdersPrice;
+    }
 }
