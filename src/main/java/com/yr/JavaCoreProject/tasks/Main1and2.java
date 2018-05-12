@@ -13,12 +13,11 @@ public class Main1and2 {
      * - для нахождения пользователей в заданном интервале лет(от и до)
      * - для нахождения суммарной цены по всем заказам пользователя
      * - для нахождения суммарной цены по заказам пользователя в заданном интервале времени(от и до по date)
-     * <p>
      * - для нахождения купленных товаров пользователя по заданной категории
      * - для нахождения заданного количества самых дорогих заказов пользователя
      */
 
-    // - для нахождения пользователя с самой большой зарплатой
+    /** Метод для нахождения пользователя с самой большой зарплатой */
     public User userWithTheBiggestSalary(ArrayList listOfUsers) {
         User simpleUser;
         User userWithTheBiggestSalary = (User) listOfUsers.get(0);
@@ -31,8 +30,8 @@ public class Main1and2 {
         return userWithTheBiggestSalary;
     }
 
-    // - для нахождения пользователей в заданном интервале лет(от и до)
-    public ArrayList findUserByAgeDiapazon(ArrayList listOfUsers, int fromAge, int toAge) {
+    /** Метод для нахождения пользователей в заданном интервале лет(от и до) */
+    public ArrayList<User> findUserByAgeDiapazon(ArrayList<User> listOfUsers, int fromAge, int toAge) {
         ArrayList listOfUsersWhoHaveAgeInDiapazon = new ArrayList();
         User userWithTheCorrectAge = (User) listOfUsers.get(0);
         for (int i = 0; i < listOfUsers.size(); i++) {
@@ -43,7 +42,7 @@ public class Main1and2 {
         return listOfUsersWhoHaveAgeInDiapazon;
     }
 
-    // - для нахождения суммарной цены по всем заказам пользователя
+    /** Метод для нахождения суммарной цены по всем заказам пользователя */
     public double getAllOrdersPrice(User user) {
         double allOrdersPrice = 0;
         for (int i = 0; i < user.getOrders().size(); i++) {
@@ -52,7 +51,7 @@ public class Main1and2 {
         return allOrdersPrice;
     }
 
-    // - для нахождения суммарной цены по заказам пользователя в заданном интервале времени(от и до по date)
+    /** Метод для нахождения суммарной цены по заказам пользователя в заданном интервале времени(от и до по date) */
     public double getAllOrdersPriceAndDate(User user, GregorianCalendar fromDate, GregorianCalendar toDate) {
         double allOrdersPrice = 0;
         for (int i = 0; i < user.getOrders().size(); i++) {
@@ -63,5 +62,20 @@ public class Main1and2 {
         return allOrdersPrice;
     }
 
+    /** Метод для нахождения купленных товаров пользователя по заданной категории */
+    public ArrayList<Product> getAProductByCategory(ArrayList<User> listOfUsers, String productCatogoryName){
+        ArrayList listOfProductsWithNeededCategory = new ArrayList();
+        for (int i = 0; i < listOfUsers.size(); i++) {
+            for (int j = 0; j < listOfUsers.get(i).getOrders().size(); j++) {
+                if (listOfUsers.get(i).getOrders().get(i).getName().equals(productCatogoryName)) {
+
+                }
+            }
+
+        }
+        return listOfProductsWithNeededCategory;
+    }
+
+    /** Метод для нахождения заданного количества самых дорогих заказов пользователя */
 
 }
