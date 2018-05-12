@@ -4,6 +4,7 @@ import org.omg.PortableInterceptor.USER_EXCEPTION;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class Main1and2 {
     /**
@@ -52,13 +53,15 @@ public class Main1and2 {
     }
 
     // - для нахождения суммарной цены по заказам пользователя в заданном интервале времени(от и до по date)
-    public double getAllOrdersPriceAndDate(User user, Date fromDate, Date toDate) {
+    public double getAllOrdersPriceAndDate(User user, GregorianCalendar fromDate, GregorianCalendar toDate) {
         double allOrdersPrice = 0;
         for (int i = 0; i < user.getOrders().size(); i++) {
-//            if (user.getOrders().get(i).getDate() ) {
-//                allOrdersPrice += user.getOrders().get(i).getProduct().getPrice();
-//            }
+            if (user.getOrders().get(i).getDate().before(fromDate)  && user.getOrders().get(i).getDate().after(toDate)) {
+                allOrdersPrice += user.getOrders().get(i).getProduct().getPrice();
+            }
         }
         return allOrdersPrice;
     }
+
+
 }

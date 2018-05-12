@@ -1,15 +1,16 @@
 package com.yr.JavaCoreProject.tasks;
 
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class Order {
 
     private String name;
     private int number;
     private Product product;
-    private String date;
+    private GregorianCalendar date;
 
-    public Order(String name, int number, Product product, String date) {
+    public Order(String name, int number, Product product, GregorianCalendar date) {
         this.name = name;
         this.number = number;
         this.product = product;
@@ -40,11 +41,11 @@ public class Order {
         this.product = product;
     }
 
-    public String getDate() {
+    public GregorianCalendar getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(GregorianCalendar date) {
         this.date = date;
     }
 

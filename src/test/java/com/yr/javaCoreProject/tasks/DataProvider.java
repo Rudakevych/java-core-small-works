@@ -9,18 +9,16 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class DataProvider {
 
     public ArrayList generatingUsers() {
 
-        DateFormat simplaDateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-        Date date = new Date();
-
         ArrayList orders = new ArrayList();
-        orders.add(new Order("Order Three", 3, new Product("ProductName3", 300, new Category("Third Category")),simplaDateFormat.format(date)));
-        orders.add(new Order("Order Two", 2, new Product("ProductName2", 200, new Category("Second Category")),simplaDateFormat.format(date)));
-        orders.add(new Order("Order One", 1, new Product("ProductName1", 100, new Category("First Category")),simplaDateFormat.format(date)));
+        orders.add(new Order("Order Three", 3, new Product("ProductName3", 300, new Category("Third Category")),new GregorianCalendar(2018, 2, 15)));
+        orders.add(new Order("Order Two", 2, new Product("ProductName2", 200, new Category("Second Category")),new GregorianCalendar(2016, 3, 1)));
+        orders.add(new Order("Order One", 1, new Product("ProductName1", 100, new Category("First Category")),new GregorianCalendar(2017, 4, 15)));
 
         ArrayList listOfUsers = new ArrayList();
         listOfUsers.add(new User("Petro", "Ivanovych", 56, 100.25, (ArrayList<Order>) orders.get(0), 2));
