@@ -68,14 +68,14 @@ public class Main1and2 {
         for (int i = 0; i < listOfUsers.size(); i++) {
             for (int j = 0; j < listOfUsers.get(i).getOrders().size(); j++) {
                 if (listOfUsers.get(i).getOrders().get(i).getName().equals(productCatogoryName)) {
-
+                    listOfProductsWithNeededCategory.add(listOfUsers.get(i).getOrders().get(j).getProduct());
                 }
             }
-
         }
         return listOfProductsWithNeededCategory;
     }
 
     /** Метод для нахождения заданного количества самых дорогих заказов пользователя */
+
 
 }
