@@ -76,6 +76,11 @@ public class Main1and2 {
     }
 
     /** Метод для нахождения заданного количества самых дорогих заказов пользователя */
+    public ArrayList<Order> numberOfTheMoustBiggerCoastOrder(User user, int numberOfOrders){
+        ArrayList<Order> listOfOrdersWithBiggestPrice = new ArrayList<>();
+
+        return listOfOrdersWithBiggestPrice;
+    }
 
 
 }
