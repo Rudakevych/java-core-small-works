@@ -1,10 +1,9 @@
 package com.yr.JavaCoreProject.tasks;
 
+import org.apache.commons.lang.builder.CompareToBuilder;
 import org.omg.PortableInterceptor.USER_EXCEPTION;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.GregorianCalendar;
+import java.util.*;
 
 public class Main1and2 {
     /**
@@ -78,6 +77,12 @@ public class Main1and2 {
     /** Метод для нахождения заданного количества самых дорогих заказов пользователя */
     public ArrayList<Order> numberOfTheMoustBiggerCoastOrder(User user, int numberOfOrders){
         ArrayList<Order> listOfOrdersWithBiggestPrice = new ArrayList<>();
+        for (int i = 0; i < user.getOrders().size(); i++) {
+//            user.getOrders().get(i).getProduct().getPrice();
+//            listOfOrdersWithBiggestPrice.add(user.getOrders().get(i));
+            Comparator<Product> productPriceComparator = new ProductPriceComparator();
+            productPriceComparator.compare(user.getOrders().get(i).getProduct(), user.getOrders().get(i+1).getProduct());
+        }
 
         return listOfOrdersWithBiggestPrice;
     }
