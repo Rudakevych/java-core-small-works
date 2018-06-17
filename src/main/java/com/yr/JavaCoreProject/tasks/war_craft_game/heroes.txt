@@ -1,0 +1,23 @@
+Hero
+- health
+- attack
+- armor
+- attack(Hero hero)
+
+Elf
+- criticalChance
+
+Dwarf
+- blockChance
+
+Human
+- healthChance
+
+Player
+- heroes
+
+Arena
+- players
+
+
+check 2018-05-13 09-28-23

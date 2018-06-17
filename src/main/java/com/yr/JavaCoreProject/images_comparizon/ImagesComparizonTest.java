@@ -1,4 +1,4 @@
-package com.yr.JavaCoreProject.imagesComparizon;
+package com.yr.JavaCoreProject.images_comparizon;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
