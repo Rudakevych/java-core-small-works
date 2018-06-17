@@ -1,6 +1,5 @@
-package com.yr.JavaCoreProject.tasks;
+package com.yr.JavaCoreProject.tasks.oop;
 
-import java.util.Date;
 import java.util.GregorianCalendar;
 
 public class Order {

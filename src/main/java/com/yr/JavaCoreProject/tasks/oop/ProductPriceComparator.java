@@ -1,4 +1,4 @@
-package com.yr.JavaCoreProject.tasks;
+package com.yr.JavaCoreProject.tasks.oop;
 
 import java.util.Comparator;
 

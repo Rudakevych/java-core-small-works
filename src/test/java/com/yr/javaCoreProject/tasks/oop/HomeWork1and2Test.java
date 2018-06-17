@@ -1,6 +1,6 @@
-package com.yr.javaCoreProject.tasks;
+package com.yr.javaCoreProject.tasks.oop;
 
-import com.yr.JavaCoreProject.tasks.Main1and2;
+import com.yr.JavaCoreProject.tasks.oop.Main1and2;
 import org.testng.annotations.Test;
 import java.util.ArrayList;
 

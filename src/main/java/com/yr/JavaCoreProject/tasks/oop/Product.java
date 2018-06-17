@@ -1,6 +1,4 @@
-package com.yr.JavaCoreProject.tasks;
-
-import java.util.Comparator;
+package com.yr.JavaCoreProject.tasks.oop;
 
 public class Product {
     private String name;

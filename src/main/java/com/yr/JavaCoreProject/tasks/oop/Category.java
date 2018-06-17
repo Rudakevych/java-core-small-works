@@ -1,4 +1,4 @@
-package com.yr.JavaCoreProject.tasks;
+package com.yr.JavaCoreProject.tasks.oop;
 
 public class Category {
     private String name;

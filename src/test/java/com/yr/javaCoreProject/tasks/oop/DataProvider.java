@@ -1,14 +1,11 @@
-package com.yr.javaCoreProject.tasks;
+package com.yr.javaCoreProject.tasks.oop;
 
-import com.yr.JavaCoreProject.tasks.Category;
-import com.yr.JavaCoreProject.tasks.Order;
-import com.yr.JavaCoreProject.tasks.Product;
-import com.yr.JavaCoreProject.tasks.User;
+import com.yr.JavaCoreProject.tasks.oop.Category;
+import com.yr.JavaCoreProject.tasks.oop.Order;
+import com.yr.JavaCoreProject.tasks.oop.Product;
+import com.yr.JavaCoreProject.tasks.oop.User;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.GregorianCalendar;
 
 public class DataProvider {
