@@ -99,7 +99,7 @@ public class NIOTest {
 //
 //            for (User myUser : users) {
 //                System.out.println("ID : " + myUser.getId());
-//                System.out.println("Name : " + myUser.getName());
+//                System.out.println("Name : " + myUser.getProductCategoryName());
 //                System.out.println("Age : " + myUser.getAge());
 //                System.out.println("---------------------------");
 //            }

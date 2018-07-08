@@ -1,15 +1,15 @@
 1. Создать классы с полями:
 
 	Category
-	- name
+	- productCategoryName
 
 	Product
-	- name
+	- productCategoryName
 	- productPrice
 	- productCategory
 
 	Order
-	- name
+	- productCategoryName
 	- number
 	- products
 	- date

@@ -23,28 +23,32 @@ public class HomeWork1and2Test {
 
     @Test
     public void findUserByAgeRangeTest() {
-        System.out.println("Users in range: " + homeWork1and.findUserByAgeRange(generatingUsers, 10, 200).size());
+        System.out.println("Users in range: "
+                + homeWork1and.findUserByAgeRange(generatingUsers, 10, 200).size());
     }
 
     @Test
     public void getAllOrdersPriceTest() {
-        System.out.println("Prise of all user's orders: " + homeWork1and.getAllOrdersPrice(generatingUsers.get(0)));
+        System.out.println("Prise of all user's orders: "
+                + homeWork1and.getAllOrdersPrice(generatingUsers.get(0)));
     }
-
 
     @Test
     public void getAllOrdersPriceAndDateTest() {
         // TODO: 7/8/18 Something wrong with date formating
-        System.out.println("Prise of all user's orders: " + homeWork1and.getAllOrdersPriceAndDate(generatingUsers.get(1), fromDate, toDate));
+        System.out.println("Prise of all user's orders: "
+                + homeWork1and.getAllOrdersPriceAndDate(generatingUsers.get(1), fromDate, toDate));
     }
 
     @Test
     public void getAProductByCategoryTest() {
-        System.out.println(" " + homeWork1and.getAProductByCategory(generatingUsers.get(2), "Third Category"));
+        System.out.println("Products with category name what was buyed: "
+                + homeWork1and.getAProductByCategory(generatingUsers.get(2), "Third Category"));
     }
 
     @Test
     public void numberOfTheMoustBiggerCoastOrderTest() {
-
+        System.out.println("The biggest orders are: "
+                + homeWork1and.numberOfTheMoustBiggerCoastOrder(generatingUsers.get(0), 3));
     }
 }

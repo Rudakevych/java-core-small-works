@@ -3,27 +3,27 @@ package com.yr.JavaCoreProject.tasks.oop;
 import java.util.Objects;
 
 public class Category {
-    private String name;
+    private String productCategoryName;
 
-    public Category(String name) {
-        this.name = name;
+    public Category(String productCategoryName) {
+        this.productCategoryName = productCategoryName;
     }
 
     public Category() {
     }
 
-    public String getName() {
-        return name;
+    public String getProductCategoryName() {
+        return productCategoryName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setProductCategoryName(String productCategoryName) {
+        this.productCategoryName = productCategoryName;
     }
 
     @Override
     public String toString() {
         return "Category{" +
-                "name='" + name + '\'' +
+                "productCategoryName='" + productCategoryName + '\'' +
                 '}';
     }
 
@@ -32,11 +32,11 @@ public class Category {
         if (this == o) return true;
         if (!(o instanceof Category)) return false;
         Category category = (Category) o;
-        return Objects.equals(name, category.name);
+        return Objects.equals(productCategoryName, category.productCategoryName);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name);
+        return Objects.hash(productCategoryName);
     }
 }
