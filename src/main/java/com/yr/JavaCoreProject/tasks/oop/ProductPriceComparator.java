@@ -6,9 +6,9 @@ public class ProductPriceComparator implements Comparator<Product> {
 
     @Override
     public int compare(Product o1, Product o2) {
-        if(o1.getPrice() > o2.getPrice())
+        if(o1.getProductPrice() > o2.getProductPrice())
             return 1;
-        else if(o1.getPrice() < o2.getPrice())
+        else if(o1.getProductPrice() < o2.getProductPrice())
             return -1;
         else
             return 0;

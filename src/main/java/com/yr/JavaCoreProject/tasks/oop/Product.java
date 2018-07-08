@@ -1,48 +1,64 @@
 package com.yr.JavaCoreProject.tasks.oop;
 
-public class Product {
-    private String name;
-    private double price;
-    private Category category;
+import java.util.Objects;
 
-    public Product(String name, double price, Category category) {
-        this.name = name;
-        this.price = price;
-        this.category = category;
+public class Product {
+    private String productName;
+    private double productPrice;
+    private Category productCategory;
+
+    public Product(String productName, double price, Category productCategory) {
+        this.productName = productName;
+        this.productPrice = price;
+        this.productCategory = productCategory;
     }
 
     public String getName() {
-        return name;
+        return productName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String productName) {
+        this.productName = productName;
     }
 
-    public double getPrice() {
-        return price;
+    public double getProductPrice() {
+        return productPrice;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public void setProductPrice(double productPrice) {
+        this.productPrice = productPrice;
     }
 
-    public Category getCategory() {
-        return category;
+    public Category getProductCategory() {
+        return productCategory;
     }
 
-    public void setCategory(Category category) {
-        this.category = category;
+    public void setProductCategory(Category productCategory) {
+        this.productCategory = productCategory;
     }
 
     @Override
     public String toString() {
         return "Product{" +
-                "name='" + name + '\'' +
-                ", price=" + price +
-                ", category='" + category + '\'' +
+                "productName='" + productName + '\'' +
+                ", productPrice=" + productPrice +
+                ", productCategory='" + productCategory + '\'' +
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
+        return Double.compare(product.productPrice, productPrice) == 0 &&
+                Objects.equals(productName, product.productName) &&
+                Objects.equals(productCategory, product.productCategory);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(productName, productPrice, productCategory);
+    }
 }
 

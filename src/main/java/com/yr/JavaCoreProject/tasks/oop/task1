@@ -5,8 +5,8 @@
 
 	Product
 	- name
-	- price
-	- category
+	- productPrice
+	- productCategory
 
 	Order
 	- name
