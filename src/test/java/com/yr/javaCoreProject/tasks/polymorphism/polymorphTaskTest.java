@@ -1,4 +1,4 @@
-package com.yr.javaCoreProject.tasks.oop;
+package com.yr.javaCoreProject.tasks.polymorphism;
 
 import com.yr.JavaCoreProject.tasks.polymorphism.PolymorphTask;
 import com.yr.JavaCoreProject.tasks.polymorphism.User;
