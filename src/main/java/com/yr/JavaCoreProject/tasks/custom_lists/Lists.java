@@ -1,4 +1,4 @@
-package com.yr.JavaCoreProject.tasks.CustomLists;
+package com.yr.JavaCoreProject.tasks.custom_lists;
 
 public interface Lists {
 

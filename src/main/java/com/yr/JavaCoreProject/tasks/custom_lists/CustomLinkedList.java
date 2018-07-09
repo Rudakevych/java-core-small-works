@@ -1,13 +1,6 @@
-package com.yr.JavaCoreProject.tasks.CustomLists;
+package com.yr.JavaCoreProject.tasks.custom_lists;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-
-public class CustomArrayList implements Lists{
-
-    ArrayList arrayList = new ArrayList();
-    LinkedList linkedList = new LinkedList();
-
+public class CustomLinkedList implements Lists{
     @Override
     public boolean add() {
         return false;
