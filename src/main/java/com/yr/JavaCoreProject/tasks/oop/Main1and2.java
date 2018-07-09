@@ -92,23 +92,19 @@ public class Main1and2 {
      * Метод для нахождения заданного количества самых дорогих заказов пользователя
      */
     public ArrayList<Order> numberOfTheMoustBiggerCoastOrder(User user, int numberOfOrders) {
-        ArrayList listOfOrdersWithBiggestPrice = new ArrayList();
+        ArrayList listOfOrdersWithBiggestPrice = user.getOrders();
+
+        Collections.sort(listOfOrdersWithBiggestPrice, new Comparator<Order>() {
+            @Override
+            public int compare(Order o1, Order o2) {
+                return Double.compare(o1.getProduct().getProductPrice(), o2.getProduct().getProductPrice());
+            }
+        }); // sort lists
 
 
-        for (int i = 0; i < user.getOrders().size(); i++) {
-//            user.getOrders().get(i).getProduct().getProductPrice();
-//            listOfOrdersWithBiggestPrice.add(user.getOrders().get(i));
-//            Comparator<Product> productPriceComparator = new ProductPriceComparator();
-//            productPriceComparator.compare(user.getOrders().get(i).getProduct(), user.getOrders().get(i + 1).getProduct());
-
-
+        for (int i = 0; i < numberOfOrders; i++) {
+            System.out.println(listOfOrdersWithBiggestPrice.get(i) + "\n");
         }
-
-        Collections.sort(listOfOrdersWithBiggestPrice); // sort lists
-
-//        for (int i = 0; i < numberOfOrders; i++) {
-//            listOfOrdersWithBiggestPrice.add()
-//        }
 
         return listOfOrdersWithBiggestPrice;
     }

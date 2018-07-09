@@ -1,5 +1,6 @@
 package com.yr.JavaCoreProject.tasks.oop;
 
+import java.util.Comparator;
 import java.util.Objects;
 
 public class Product {
@@ -21,7 +22,7 @@ public class Product {
         this.productName = productName;
     }
 
-    public double getProductPrice() {
+    public  double getProductPrice() {
         return productPrice;
     }
 
@@ -60,5 +61,12 @@ public class Product {
     public int hashCode() {
         return Objects.hash(productName, productPrice, productCategory);
     }
+
+//    public static Comparator<Product> productPriceComparator(Product product1, Product product2) {
+//        double productPrice1 = product1.getProductPrice();
+//        double productPrice2 = product2.getProductPrice();
+//
+//        return productPrice1 - productPrice2;
+//    }
 }
 
