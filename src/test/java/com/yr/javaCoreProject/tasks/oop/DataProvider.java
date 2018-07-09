@@ -18,6 +18,10 @@ public class DataProvider {
     public ArrayList<Order> ordersList() {
         ArrayList<Order> orders = new ArrayList<Order>();
 
+        orders.add(new Order("Order One", 1,
+                new Product("ProductName1", 100,
+                        new Category("First Category")),
+                new GregorianCalendar(2017, 4, 15)));
         orders.add(new Order("Order Three", 3,
                 new Product("ProductName3", 300,
                         new Category("Third Category")),
@@ -26,10 +30,6 @@ public class DataProvider {
                 new Product("ProductName2", 200,
                         new Category("Second Category")),
                 new GregorianCalendar(2016, 3, 1)));
-        orders.add(new Order("Order One", 1,
-                new Product("ProductName1", 100,
-                        new Category("First Category")),
-                new GregorianCalendar(2017, 4, 15)));
 
         return orders;
     }

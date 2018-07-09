@@ -13,9 +13,6 @@ public class polymorphTaskTest {
     ArrayList<User> generatingUsers = dataProvider.generatingUsers();
     PolymorphTask polymorphTask = new PolymorphTask();
 
-    GregorianCalendar fromDate = new GregorianCalendar(2000, 1, 1);
-    GregorianCalendar toDate = new GregorianCalendar(2018, 12, 1);
-
     @Test
     public void userWithTheBiggestSalaryTest() {
         System.out.println(polymorphTask.userWithTheBiggestSalary(generatingUsers));
@@ -24,7 +21,7 @@ public class polymorphTaskTest {
     @Test
     public void findUserByAgeRangeTest() {
         System.out.println("Users in range: "
-                + polymorphTask.findUserByAgeRange(generatingUsers, 10, 20).size());
+                + polymorphTask.findUserByAgeRange(generatingUsers, 40, 60).size());
     }
 
     @Test
@@ -37,7 +34,9 @@ public class polymorphTaskTest {
     public void getAllOrdersPriceAndDateTest() {
         // TODO: 7/8/18 Something wrong with date formating
         System.out.println("Prise of all user's orders: "
-                + polymorphTask.getAllOrdersPriceAndDate(generatingUsers.get(1), fromDate, toDate));
+                + polymorphTask.getAllOrdersPriceAndDate(generatingUsers.get(1),
+                new GregorianCalendar(2000, 1, 1),
+                new GregorianCalendar(2018, 12, 1)));
     }
 
     @Test
@@ -48,7 +47,7 @@ public class polymorphTaskTest {
 
     @Test
     public void numberOfTheMoustBiggerCoastOrderTest() {
-        // TODO: 2018-07-09 Hmmmmmm...
+        // TODO: 2018-07-09 Hmmmmmm... Smth wrong with sorting...
         System.out.println("The biggest orders are: "
                 + polymorphTask.numberOfTheMoustBiggerCoastOrder(generatingUsers.get(1), 1));
     }

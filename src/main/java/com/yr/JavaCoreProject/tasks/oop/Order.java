@@ -1,6 +1,7 @@
 package com.yr.JavaCoreProject.tasks.oop;
 
 import java.util.GregorianCalendar;
+import java.util.Objects;
 
 public class Order {
 
@@ -56,5 +57,23 @@ public class Order {
                 ", product=" + product +
                 ", date=" + date +
                 '}';
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Order)) return false;
+        Order order = (Order) o;
+        return getNumber() == order.getNumber() &&
+                Objects.equals(getName(), order.getName()) &&
+                Objects.equals(getProduct(), order.getProduct()) &&
+                Objects.equals(getDate(), order.getDate());
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(getName(), getNumber(), getProduct(), getDate());
     }
 }
