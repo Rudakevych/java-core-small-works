@@ -1,7 +1,7 @@
 package com.yr.javaCoreProject.tasks.oop;
 
-import com.yr.JavaCoreProject.tasks.oop.PolymorphTask;
-import com.yr.JavaCoreProject.tasks.oop.User;
+import com.yr.JavaCoreProject.tasks.polymorphism.PolymorphTask;
+import com.yr.JavaCoreProject.tasks.polymorphism.User;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;

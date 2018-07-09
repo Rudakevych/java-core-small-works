@@ -1,9 +1,9 @@
 package com.yr.javaCoreProject.tasks.oop;
 
-import com.yr.JavaCoreProject.tasks.oop.Category;
-import com.yr.JavaCoreProject.tasks.oop.Order;
-import com.yr.JavaCoreProject.tasks.oop.Product;
-import com.yr.JavaCoreProject.tasks.oop.User;
+import com.yr.JavaCoreProject.tasks.polymorphism.Category;
+import com.yr.JavaCoreProject.tasks.polymorphism.Order;
+import com.yr.JavaCoreProject.tasks.polymorphism.Product;
+import com.yr.JavaCoreProject.tasks.polymorphism.User;
 
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
