@@ -2,7 +2,7 @@ package com.yr.JavaCoreProject.tasks.oop;
 
 import java.util.*;
 
-public class Main1and2 {
+public class PolymorphTask {
     /**
      * Написать методы:
      * - для нахождения пользователя с самой большой зарплатой
@@ -16,15 +16,13 @@ public class Main1and2 {
     /**
      * Метод для нахождения пользователя с самой большой зарплатой
      */
-    public User userWithTheBiggestSalary(ArrayList listOfUsers) {
+    public User userWithTheBiggestSalary(ArrayList<User> listOfUsers) {
         User simpleUser;
-        User userWithTheBiggestSalary = (User) listOfUsers.get(0);
+        User userWithTheBiggestSalary = listOfUsers.get(0);
         for (int i = 0; i < listOfUsers.size(); i++) {
-            simpleUser = (User) listOfUsers.get(i);
+            simpleUser = listOfUsers.get(i);
             if (userWithTheBiggestSalary.getSalary() <= simpleUser.getSalary()) {
                 userWithTheBiggestSalary.setSalary(simpleUser.getSalary());
-            } else {
-                System.out.println("Can't find any users! Sorry, man.");
             }
         }
         return userWithTheBiggestSalary;
@@ -34,14 +32,13 @@ public class Main1and2 {
      * Метод для нахождения пользователей в заданном интервале лет(от и до)
      */
     public ArrayList<User> findUserByAgeRange(ArrayList<User> listOfUsers, int fromAge, int toAge) {
-        ArrayList<User> listOfUsersWhoHaveAgeInDiapazon = new ArrayList<User>();
-        User userWithTheCorrectAge = listOfUsers.get(0);
+        ArrayList<User> listOfUsersWhoHaveAgeInRange = new ArrayList();
         for (int i = 0; i < listOfUsers.size(); i++) {
-            if (userWithTheCorrectAge.getAge() >= fromAge && userWithTheCorrectAge.getAge() <= toAge) {
-                listOfUsersWhoHaveAgeInDiapazon.add(userWithTheCorrectAge);
+            if (listOfUsers.get(i).getAge() >= fromAge || listOfUsers.get(i).getAge() <= toAge){
+                listOfUsersWhoHaveAgeInRange.add(listOfUsers.get(i));
             }
         }
-        return listOfUsersWhoHaveAgeInDiapazon;
+        return listOfUsersWhoHaveAgeInRange;
     }
 
     /**
@@ -64,8 +61,6 @@ public class Main1and2 {
         for (int i = 0; i < user.getOrders().size(); i++) {
             if (user.getOrders().get(i).getDate().before(fromDate) && user.getOrders().get(i).getDate().after(toDate)) {
                 allOrdersPrice += user.getOrders().get(i).getProduct().getProductPrice();
-            } else {
-                System.out.println("Hmmm... No one date in this range.");
             }
         }
         return allOrdersPrice;
@@ -80,8 +75,6 @@ public class Main1and2 {
         for (int j = 0; j < user.getOrders().size(); j++) {
             if (user.getOrders().get(j).getProduct().getProductCategory().getProductCategoryName().equals(productCatogoryName)) {
                 listOfProductsWithNeededCategory.add(user.getOrders().get(j).getProduct());
-            } else {
-                System.out.println("Cant find any product with category = " + productCatogoryName);
             }
         }
         return listOfProductsWithNeededCategory;
@@ -99,11 +92,10 @@ public class Main1and2 {
             public int compare(Order o1, Order o2) {
                 return Double.compare(o1.getProduct().getProductPrice(), o2.getProduct().getProductPrice());
             }
-        }); // sort lists
-
+        });
 
         for (int i = 0; i < numberOfOrders; i++) {
-            System.out.println(listOfOrdersWithBiggestPrice.get(i) + "\n");
+            listOfOrdersWithBiggestPrice.get(i);
         }
 
         return listOfOrdersWithBiggestPrice;

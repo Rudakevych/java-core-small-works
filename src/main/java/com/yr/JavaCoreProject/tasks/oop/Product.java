@@ -62,11 +62,5 @@ public class Product {
         return Objects.hash(productName, productPrice, productCategory);
     }
 
-//    public static Comparator<Product> productPriceComparator(Product product1, Product product2) {
-//        double productPrice1 = product1.getProductPrice();
-//        double productPrice2 = product2.getProductPrice();
-//
-//        return productPrice1 - productPrice2;
-//    }
 }
 
